@@ -1,0 +1,27 @@
+import pandas as pd
+
+var = {
+    "A": [1, 2, 3, 4, 5],
+    "b": [1, 264535, 3, 445, 56],
+    "c": [1, 264535, 987, 445, 5],
+    1: [1, 2, 3, 7, 5],
+}
+m = pd.DataFrame(var, columns=["A", 1], index=["A", "b", "c", "d", "e"])
+print(m)
+print(m["A"][2])
+# print(var)
+
+print()
+
+v = pd.DataFrame(
+    {
+        "A": [1, 2, 3, 4, 5],
+        "b": [1, 264535, 3, 445, 56],
+        "c": [1, 264535, 987, 445, 5],
+        1: [1, 2, 3, 7, 5],
+    }
+)
+print(v)
+
+
+print(v.groupby("b").count())
