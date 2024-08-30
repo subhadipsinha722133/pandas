@@ -1,0 +1,19 @@
+import pandas as pd
+
+var = pd.DataFrame(
+    {
+        "A": ([1, 29, 638, 49, 56]),
+        "b": ([1, 264535, 3, 445, 56]),
+        "c": pd.Series([1, 264535, 987, 445, 5]),
+    }
+)
+var["Python_1"] = var["A"] <= 90
+
+print(var)
+
+print()
+var["Python_2"] = var["b"] <= 90
+print(var)
+print()
+var["Python_3"] = var["c"] <= 90
+print(var)
